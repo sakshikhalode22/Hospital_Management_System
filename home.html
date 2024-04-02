@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- import css file -->
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/home.js"></script>
+    <script src="./js/homeWithPromise.js"></script>
+
+    <!-- Latest compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+      crossorigin="anonymous"
+    />
+
+    <!-- Optional theme -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css"
+      integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+      crossorigin="anonymous"
+    />
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"
+      integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body style="padding: 20px">
+    <!-- Navigation bar -->
+    <nav class="bg-1 navbar navbar-default navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button
+            type="button"
+            class="navbar-toggle"
+            data-toggle="collapse"
+            data-target="#myNavbar"
+          >
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" style="font-size: 19px; font-weight: bold"
+            >Infy HMS</a
+          >
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#about">ABOUT US</a></li>
+            <li><a href="#specialties">SPECIALTIES</a></li>
+            <li><a href="#doctors">OUR DOCTORS</a></li>
+            <li><a href="#appointment">APPOINTMENT</a></li>
+            <li><a href="#blood">BLOODBANK</a></li>
+            <li><a href="#contact">CONTACT US</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Specialities -->
+    <div id="specialties" class="container" align="center">
+      <p>
+        <span style="font-weight: bold; font-size: 17px">SPECIALTIES</span
+        ><br /><br />
+      </p>
+      <div class="row slideanim">
+        <div class="col-sm-4">
+          <span><img src="./img/accident.png" /> </span><br />
+          <p>Accident and Trauma</p>
+        </div>
+        <div class="col-sm-4">
+          <span><img src="./img/ent.png" /> </span><br />
+          <p>ENT</p>
+          <br /><br />
+        </div>
+        <div class="col-sm-4">
+          <span><img src="./img/cardio.png" /> </span><br />
+          <p>Cardiology</p>
+        </div>
+      </div>
+      <div class="row slideanim">
+        <div class="col-sm-4">
+          <span><img src="./img/neuro.png" /> </span><br />
+          <p>Neurology</p>
+        </div>
+        <div class="col-sm-4">
+          <span><img src="./img/eye.png" /> </span><br />
+          <p>Opthalmology</p>
+        </div>
+        <div class="col-sm-4">
+          <span><img src="./img/gastro.png" /> </span><br />
+          <p>Gastrointestinal</p>
+        </div>
+        <br /><br /><br />
+      </div>
+    </div>
+    <!-- more section -->
+    <div class="container" align="center">
+      <a
+        href="spcl.html"
+        style="font-size: 15px; color: #001a33; font-weight: bold"
+        ><u><i>More</i></u></a
+      >
+    </div>
+    <!-- Container (Doctors Section) -->
+    <div
+      id="doctors"
+      class="container"
+      style="background-color: #e6e6e6; margin-top: 10px"
+      align="center"
+    >
+      <p><span style="font-weight: bold; font-size: 17px">OUR DOCTORS</span></p>
+      <div align="center">
+        <table
+          id="tableMain"
+          width="90%"
+          style="font-size: 12px"
+          align="center"
+          class="table-responsive"
+        >
+          <tr align="center">
+            <td id="data0"></td>
+            <td id="data1"></td>
+          </tr>
+          <tr align="center">
+            <td id="data2"></td>
+            <td id="data3"></td>
+          </tr>
+        </table>
+
+        <br />
+      </div>
+    </div>
+
+    <!-- Container (Appointment Section) -->
+    <div
+      id="appointment"
+      class="container"
+      style="background-color: #e6e6e6"
+      align="center"
+    >
+      <div class="text-center">
+        <p>
+          <span style="font-weight: bold; font-size: 17px">APPOINTMENT</span
+          ><br /><br />
+          Take an appointment online
+        </p>
+      </div>
+      <table style="background-color: #f2f2f2" align="center" width="100%">
+        <tr>
+          <td>
+            <br /><br />
+            <form name="doc" style="text-align: center" align="center">
+              Location: &nbsp;
+              <select id="Location" required>
+                <option value="">--Select--</option>
+                <option value="Bangalore">Bangalore</option>
+                <option value="Chennai">Chennai</option>
+                <option value="Hyderabad">Hyderabad</option>
+                <option value="Jaipur">Jaipur</option>
+                <option value="Mangalore">Mangalore</option>
+                <option value="Mysore">Mysore</option>
+                <option value="Trivandrum">Trivandrum</option>
+              </select>
+              &nbsp;&nbsp;&nbsp;&nbsp; Department to visit:&nbsp;
+              <select id="dpt" required>
+                <option value="">--Select--</option>
+                <option value="Dental">Dental</option>
+                <option value="ENT">ENT</option>
+                <option value="Physician">Physician</option>
+                <option value="Opthalmology">Opthalmology</option>
+                <option value="Cardiology">Cardiology</option>
+                <option value="Neurology">Neurology</option>
+                <option value="Gastrointestinal">Gastrointestinal</option>
+              </select>
+              &nbsp;&nbsp;&nbsp;&nbsp; Date :&nbsp;
+              <input id="dateField" type="date" min="2024-03-07" required />
+              &nbsp;&nbsp;&nbsp;&nbsp; Time :&nbsp;
+              <input id="time" type="time" name="TIME" required /><br />
+              <br />
+              <input
+                type="submit"
+                id="submit"
+                class="btn btn-default"
+                value="Proceed"
+                style="text-align: center"
+                onClick="proceedAppointment()"
+              />
+            </form>
+            <br />
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- Blood bank -->
+    <div>
+      <div id="blood" class="container" align="center">
+        <h2 style="font-weight: bold; padding-right: 250px; font-size: 17px">
+          BLOOD BANK
+        </h2>
+        <div class="row">
+          <div class="col-sm-4">
+            <img src="./img/blood.jpg" height="180px" width="300px" />
+          </div>
+          <div class="col-sm-8 slideanim">
+            <div class="row">
+              <div align="left">
+                Blood is a specialized bodily fluid that delivers necessary
+                substances to the body’s cells such as nutrients and oxygen, and
+                transports waste products away from those same cells. Blood
+                comprises more than 8% of the body weight of a healthy
+                individual. On an average, every adult person has about 5 to 6
+                liters of blood. The major component of blood is a fluid called
+                plasma in which are suspended cellular elements. These are Red
+                Blood Cells or RBCs, White Blood Cells or WBCs and platelets.
+                <br /><br />
+                <button
+                  class="btn btn-default pull-right"
+                  onclick="bloodAvailability()"
+                >
+                  Check blood availability
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-center">
+      <a class="up-arrow" href="#specialties" data-toggle="tooltip" title="TO TOP">
+        <span
+          class="glyphicon glyphicon-chevron-up"
+          style="color: #777"
+        ></span> </a
+      ><br />
+
+      <div style="font-size: 16px; color: #777">
+        <a href="feedback.html" style="color: #777">Feedback</a> |
+        <a href="join.html" style="color: #777">Join us</a> |
+        <a href="report.html" style="color: #777">Patient reports</a> |
+        <a href="login.html" style="color: #777">Login</a>
+        <br />
+      </div>
+      <p style="font-size: 12px; color: #777">
+        &copy; 2017 ETA | UI &amp; Markup, Infosys Limited. All Rights Reserved.
+      </p>
+    </footer>
+  </body>
+</html>

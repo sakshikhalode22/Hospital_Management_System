@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="./js/report.js"></script>
+
+    <!-- Latest compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+      crossorigin="anonymous"
+    />
+
+    <!-- Optional theme -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css"
+      integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+      crossorigin="anonymous"
+    />
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"
+      integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- Container (Report Section) -->
+    <div id="report" class="container-fluid">
+      <div class="row">
+        <div class="col-sm-7" style="margin-top: 8px">
+          <br />
+          <img src="./img/report.png" />
+        </div>
+        <br />
+        <div class="col-sm-4">
+          <form action="javascript:report()">
+            <p>
+              <span
+                style="font-weight: bold; font-size: 17px; text-align: left"
+              >
+                LAB REPORT</span
+              >
+            </p>
+            <input
+              type="text"
+              id="patientId"
+              class="form-control"
+              placeholder="Enter your patient ID"
+              style="margin-top: 16px"
+            />
+            <input
+              type="email"
+              id="email"
+              class="form-control"
+              placeholder="Enter registered email address"
+              style="margin-top: 16px"
+            />
+            <div style="padding-right: 200px">
+              <span>
+                <input
+                  class="btn btn-default"
+                  style="font-weight: bold; font-size: 15px; margin-top: 16px"
+                  type="submit"
+                  id="submit"
+                  value="Submit"
+                />
+                &nbsp;&nbsp;
+                <input
+                  type="reset"
+                  class="btn btn-default"
+                  style="margin-top: 16px; font-weight: bold; font-size: 15px"
+                  type="reset"
+                  id="reset"
+                  value="Reset"
+                />
+              </span>
+            </div>
+            <br />
+            <div style="font-size: bold" id="message"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="./js/appointment.js"></script>
+
+    <!-- Latest compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+      crossorigin="anonymous"
+    />
+
+    <!-- Optional theme -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css"
+      integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+      crossorigin="anonymous"
+    />
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"
+      integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body  id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50" onLoad="retrieveData();">
+    <div id="about" class="container-fluid">
+      <div class="row">
+        <div class="col-sm-7" style="margin-top: 8px">
+          <br />
+          <img src="./img/appoinmentv3.png" />
+        </div>
+        <div class="col-sm-4">
+          <form action="javascript:checkDetails()">
+            <br />
+            <p align="left">
+              <span
+                style="font-weight: bold; font-size: 17px; font-family: verdana"
+                >BOOK AN APPOINTMENT</span
+              >
+            </p>
+            <input
+              type="text"
+              value=""
+              id="name"
+              required
+              autofocus="on"
+              placeholder="User name"
+              class="form-control"
+            />
+            <input
+              type="email"
+              value=""
+              id="email"
+              required
+              placeholder="EmailID"
+              class="form-control"
+              style="margin-top: 16px"
+            />
+            <input
+              type="text"
+              value=""
+              placeholder="Phone number"
+              style="margin-top: 16px"
+              id="mobile"
+              required
+              class="form-control"
+              onkeyup='validateMobile();' 
+            />
+            <div style="font-size:small;color:red;margin-top:16px;" id='mobileMessage'></div>
+            Are you new to this hospital?<br />
+            <input type="radio" name="new" value="Y" required /> Yes, I am new
+            <input type="radio" name="new" value="N" required /> No, returning
+            patient
+            <br />
+            <br />
+            <div style="padding-right: 200px">
+              <span
+                ><input
+                  class="btn btn-default"
+                  style="font-weight: bold; font-size: 15px; margin-top: 16px"
+                  type="submit"
+                  id="submit"
+                  value="Proceed" />
+                <input
+                  type="reset"
+                  class="btn btn-default"
+                  style="margin-top: 16px; font-weight: bold; font-size: 15px"
+                  type="reset"
+                  id="reset"
+                  value="Reset"
+              /></span>
+            </div>
+          </form>
+          <br />
+          <div
+            id="content"
+            style="color: #2d2d30; font-weight: bold; width: 99%"
+            align="center"
+          ></div>
+        
+          <br />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

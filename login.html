@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="./js/login.js"></script>
+
+    <!-- Latest compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+      crossorigin="anonymous"
+    />
+
+    <!-- Optional theme -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css"
+      integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+      crossorigin="anonymous"
+    />
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"
+      integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body id="myPage" class="bg"  onLoad="retriveData();" >
+    <div id="about" class="container-fluid">
+      <div class="row">
+        <div class="col-sm-7" style="margin-top: 10px">
+          <br />
+          <img src="./img/Sign.png" />
+        </div>
+        <div class="col-sm-5">
+          <form action="javascript:login()" class="form-horizontal" role="form" >
+            <br/>
+            <p>
+              <span align="left" style="font-weight: bold; font-size: 18px"
+                >LOGIN</span
+              >
+            </p>
+            <div class="form-group">
+              <div class="col-sm-9">
+                <input
+                  type="email"
+                  id="inputEmail"
+                  class="form-control"
+                  placeholder="Enter your email address"
+                />
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-sm-9">
+                <input
+                  type="password"
+                  id="inputPassword"
+                  class="form-control"
+                  placeholder="Enter your password"
+                />
+              </div>
+            </div>
+            <input
+              class="btn btn-default"
+              style="
+                display: block;
+                width: 16%;
+                font-weight: bold;
+                font-size: 15px;
+                text-align: center;
+                margin-top: 4px;
+              "
+              type="submit"
+              id="submit"
+              value="Login"
+            />
+            <span style="color: #2d2d30">New user?</span>
+            <a
+              href="register.html"
+              style="
+                width: 73%;
+                font-weight: bold;
+                font-size: 15px;
+                color: grey;
+              "
+              id="submit"
+              ><span style="text-decoration: underline; color: #2d2d30"
+                >Sign up</span
+              >
+            </a>
+            <br />
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

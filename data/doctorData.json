@@ -1,0 +1,27 @@
+[
+    {
+        "name": "Dr. Kenneth",
+        "consultant": "Organ Transplant",
+        "expertise": ["Liver Transplantation", "Tuberculosis"],
+        "imgUrl":"./img/kenneth.jpg"
+        
+    },
+    {
+        "name": "Dr. Voita",
+        "consultant": "Ear, Nose and Throat",
+        "expertise": ["Otorhinolaryngology", "Focalizing on Pediatric aspect"],
+        "imgUrl":"./img/volta.jpg"
+    },
+    {
+        "name": "Dr. Shri",
+        "consultant": "Psychiatry and Neurology",
+        "expertise": ["Sleep Disorder", "Mental illness"],
+        "imgUrl":"./img/shri.jpg"
+    },
+    {
+        "name": "Dr. Jen",
+        "consultant": "Cardiac Sciences",
+        "expertise": ["Aortic Aneurysm Surgery", "Infan cardiac surgery"],
+        "imgUrl":"./img/jen.jpg"
+    }
+]
